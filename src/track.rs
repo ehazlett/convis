@@ -93,6 +93,9 @@ impl Tracker {
             if let Some(c) = self.client.lookup(cgroup).await {
                 pod = self.client.pod(&c).await;
                 container = Some(c);
+                //if let Some(p) = self.client.pod(&container.clone().unwrap()).await {
+                //    pod = Some(p)
+                //}
                 break;
             }
         }
