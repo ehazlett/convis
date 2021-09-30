@@ -1,0 +1,12 @@
+image: docker.io/kentiklabs/convis:latest
+manifests:
+  -
+    image: docker.io/kentiklabs/convis:arm64
+    platform:
+      architecture: arm64
+      os: linux
+  -
+    image: docker.io/kentiklabs/convis:amd64
+    platform:
+      architecture: amd64
+      os: linux
